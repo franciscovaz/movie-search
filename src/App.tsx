@@ -1,7 +1,13 @@
 import React from 'react';
 
-function App() {
-  return <h1>Movie Search</h1>;
-}
+import GlobalStyle from './styles/global';
+import Routes from './pages/routes';
+
+const App: React.FC = () => (
+  <>
+    <Routes />
+    <GlobalStyle />
+  </>
+);
 
 export default App;
