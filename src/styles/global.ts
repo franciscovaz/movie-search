@@ -8,7 +8,7 @@ export default createGlobalStyle`
     outline: 0;
   }
 
-  body, input, button {
+  body {
     font: 16px Roboto, sans-serif;
     background-color: #0A1014;
     margin: 0 13%;
