@@ -10,5 +10,7 @@ export default createGlobalStyle`
 
   body, input, button {
     font: 16px Roboto, sans-serif;
+    background-color: #0A1014;
+    margin: 0 13%;
   }
 `;

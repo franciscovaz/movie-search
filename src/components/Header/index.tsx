@@ -1,5 +1,14 @@
 import React from 'react';
+import { Container } from './styles';
 
-const Header: React.FC = () => <h1>Header</h1>;
+import logo from '../../assets/Logos/logo.svg';
+
+const Header: React.FC = () => {
+  return (
+    <Container>
+      <img src={logo} alt="movieLogo" />
+    </Container>
+  );
+};
 
 export default Header;
