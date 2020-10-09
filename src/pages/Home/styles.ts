@@ -4,11 +4,9 @@ export const Container = styled.div`
   width: 100%;
   margin: 50px auto;
 
-  .row {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: wrap;
-  }
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
 `;
 
 export const CardContainer = styled.div`
