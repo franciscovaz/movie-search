@@ -5,8 +5,8 @@ import Routes from './pages/routes';
 
 const App: React.FC = () => (
   <>
-    <Routes />
     <GlobalStyle />
+    <Routes />
   </>
 );
 
