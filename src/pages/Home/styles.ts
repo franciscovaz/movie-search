@@ -10,12 +10,17 @@ export const Container = styled.div`
 `;
 
 export const NoInfoContainer = styled.div`
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  a {
+    text-decoration: none;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
 
-  img {
-    width: 50%;
+    img {
+      width: 50%;
+    }
   }
 `;

@@ -28,8 +28,11 @@ const Home: React.FC = () => {
         </Container>
       ) : (
         <NoInfoContainer>
-          <img src={NoInfoImg} alt="No movies searched" />
-          {/* <Link to="/movie-detail">Detail</Link> */}
+          <Link to="/movie-detail">
+            <img src={NoInfoImg} alt="No movies searched" />
+
+            <p>Wanna advice?</p>
+          </Link>
         </NoInfoContainer>
       )}
     </>
