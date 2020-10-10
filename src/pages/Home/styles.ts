@@ -14,6 +14,7 @@ export const CardContainer = styled.div`
   width: 200px;
   height: 300px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+  padding: 12px;
 
   .imgBox {
     position: absolute;
@@ -33,16 +34,39 @@ export const CardContainer = styled.div`
     }
   }
 
-  &:hover .imgBox img {
+  &:hover .imgBox > img {
     opacity: 0.2;
   }
 
+  & .content {
+    opacity: 0;
+  }
+
   &:hover .content {
+    opacity: 1;
     position: absolute;
-    bottom: 20px;
-    left: 10%;
+    bottom: 12px;
+    left: 12px;
     width: 80%;
     color: #fff;
+
+    p {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+  }
+
+  & .favouritesIcon {
+    opacity: 0;
+  }
+
+  &:hover .favouritesIcon {
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
   }
 
   /* width: 20%; */
@@ -62,9 +86,4 @@ export const CardContainer = styled.div`
     width: 100%;
     flex: 0 1 calc(25% - 1em);
   } */
-`;
-
-export const HoverCardContainer = styled.div`
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
 `;
