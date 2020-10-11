@@ -10,6 +10,7 @@ import { Container } from './styles';
 interface MovieResponseProps {
   Response: string;
   Search: [MovieProps];
+  Error?: string;
 }
 
 interface MovieProps {
@@ -35,11 +36,12 @@ const SearchBar: React.FC = () => {
           `?apikey=${process.env.REACT_APP_API_OMDb_SECRET}&s=${inputMovie}`,
         )
         .then(response => {
-          console.log(response.data);
-          if (response.data.Response === 'False') {
+          const { Response, Search, Error } = response.data;
+          if (Response === 'False') {
             setMoviesSearched([]);
+            console.log(Error);
           }
-          setMoviesSearched(response.data.Search);
+          setMoviesSearched(Search);
         })
         .catch(err => {
           console.log('Do something about this error: ', err);
