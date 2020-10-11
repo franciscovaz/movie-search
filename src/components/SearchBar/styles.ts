@@ -10,7 +10,7 @@ export const Container = styled.div`
     padding: 12px 12px 12px 36px;
     border: 0;
     border-radius: 8px;
-    color: '#OA1014';
+    color: var(--dark-grey);
 
     &::placeholder {
       font-size: 14px;

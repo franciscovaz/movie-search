@@ -39,7 +39,7 @@ export const CardContainer = styled.div`
     bottom: 12px;
     left: 12px;
     width: 80%;
-    color: #fff;
+    color: var(--white);
 
     p {
       font-weight: bold;

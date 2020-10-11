@@ -17,7 +17,7 @@ export const NoInfoContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: var(--white);
 
     img {
       width: 50%;
