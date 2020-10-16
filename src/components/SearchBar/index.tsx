@@ -3,7 +3,7 @@ import React, { useState, useCallback, ChangeEvent, useEffect } from 'react';
 import Icon from '../../assets/Icons/icon-magnifier-grey.svg';
 import api from '../../services/api';
 
-import { addMoviesSearchedRequest } from '../../store/modules/movies/actions';
+import { addMoviesSearchedRequest } from '../../store/modules/movies/moviesActions';
 
 import { useDispatch } from 'react-redux';
 
