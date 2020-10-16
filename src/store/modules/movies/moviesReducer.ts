@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 
-import { ActionTypes, IMovieProps } from './types';
+import { ActionTypes, IMovieProps } from './moviesTypes';
 
 const INITIAL_STATE: IMovieProps = {
   nameSearched: '',

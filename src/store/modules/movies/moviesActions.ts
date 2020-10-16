@@ -1,4 +1,4 @@
-import { ActionTypes, IMovieProps } from './types';
+import { ActionTypes, IMovieProps } from './moviesTypes';
 
 export function addMoviesSearchedRequest(movieName: string) {
   return {
