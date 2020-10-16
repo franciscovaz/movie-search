@@ -3,6 +3,10 @@ import React, { useState, useCallback, ChangeEvent, useEffect } from 'react';
 import Icon from '../../assets/Icons/icon-magnifier-grey.svg';
 import api from '../../services/api';
 
+import { addMoviesSearchedRequest } from '../../store/modules/movies/actions';
+
+import { useDispatch } from 'react-redux';
+
 /* import { FiSearch } from 'react-icons/fi'; */
 
 import { Container } from './styles';
@@ -25,13 +29,16 @@ const SearchBar: React.FC = () => {
   const [inputMovie, setInputMovie] = useState('');
   const [moviesSearched, setMoviesSearched] = useState<MovieProps[]>([]);
 
+  const dispatch = useDispatch();
+
   const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInputMovie(e.target.value);
   }, []);
 
   useEffect(() => {
     if (inputMovie) {
-      api
+      dispatch(addMoviesSearchedRequest(inputMovie));
+      /* api
         .get<MovieResponseProps>(
           `?apikey=${process.env.REACT_APP_API_OMDb_SECRET}&s=${inputMovie}`,
         )
@@ -45,7 +52,7 @@ const SearchBar: React.FC = () => {
         })
         .catch(err => {
           console.log('Do something about this error: ', err);
-        });
+        }); */
     }
   }, [inputMovie]);
 

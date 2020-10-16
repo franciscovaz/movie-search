@@ -4,12 +4,14 @@ export enum ActionTypes {
   addMoviesSearchedFailure = 'ADD_MOVIES_SEARCHED_FAILURE',
 }
 
-export interface MovieProps {
-  Search: [
-    Title: string,
-    Year: string,
-    imdbID: string,
-    Type: string,
-    Poster: string,
-  ];
+export interface IMovieItem {
+  Title: string;
+  Year: string;
+  imdbID: string;
+  Type: string;
+  Poster: string;
+}
+export interface IMovieProps {
+  nameSearched: string;
+  Search: IMovieItem[];
 }
