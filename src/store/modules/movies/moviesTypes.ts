@@ -15,3 +15,9 @@ export interface IMovieProps {
   nameSearched: string;
   Search: IMovieItem[];
 }
+
+export interface IMovieResponseProps {
+  Response: string;
+  Search: [IMovieItem];
+  Error?: string;
+}

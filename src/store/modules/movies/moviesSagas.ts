@@ -6,22 +6,19 @@ import {
   addMoviesSearchedSuccess,
 } from './moviesActions';
 
-import { ActionTypes, IMovieProps } from './moviesTypes';
+import { ActionTypes, IMovieResponseProps } from './moviesTypes';
 import api from '../../../services/api';
 
 type GetMoviesSearched = ReturnType<typeof addMoviesSearchedRequest>;
 
 function* getMoviesSearched({ payload }: GetMoviesSearched) {
-  console.log('Entrei no saga!');
-
-  const apiResponse: AxiosResponse<IMovieProps> = yield call(
+  const apiResponse: AxiosResponse<IMovieResponseProps> = yield call(
     api.get,
     `?apikey=${process.env.REACT_APP_API_OMDb_SECRET}&s=${payload.movieName}`,
   );
 
-  console.log('Resp: ', apiResponse.data);
-
-  if (apiResponse.data) {
+  if (apiResponse.data.Response === 'True') {
+    console.log('Entrei', apiResponse.data);
     yield put(addMoviesSearchedSuccess(apiResponse.data));
   }
 }

@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 
 import { Container } from './styles';
 
-interface MovieResponseProps {
+/* interface MovieResponseProps {
   Response: string;
   Search: [MovieProps];
   Error?: string;
@@ -23,11 +23,11 @@ interface MovieProps {
   imdbID: string;
   Type: string;
   Poster: string;
-}
+} */
 
 const SearchBar: React.FC = () => {
   const [inputMovie, setInputMovie] = useState('');
-  const [moviesSearched, setMoviesSearched] = useState<MovieProps[]>([]);
+  //const [moviesSearched, setMoviesSearched] = useState<MovieProps[]>([]);
 
   const dispatch = useDispatch();
 
