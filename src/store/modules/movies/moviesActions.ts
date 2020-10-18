@@ -17,3 +17,10 @@ export function addMoviesSearchedSuccess(movies: IMoviesState) {
     },
   };
 }
+
+export function addMoviesSearchedFailure() {
+  return {
+    type: ActionTypes.addMoviesSearchedFailure,
+    payload: {},
+  };
+}

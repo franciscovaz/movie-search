@@ -23,6 +23,12 @@ const movies: Reducer<IMovieProps> = (state = INITIAL_STATE, action) => {
         Search: action.payload.movies.Search,
       };
     }
+    case ActionTypes.addMoviesSearchedFailure: {
+      return {
+        Search: [],
+        nameSearched: '',
+      };
+    }
     default: {
       return state;
     }
