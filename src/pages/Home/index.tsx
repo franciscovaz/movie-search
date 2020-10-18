@@ -5,7 +5,7 @@ import { Container, NoInfoContainer, CardContainer } from './styles';
 
 import NoInfoImg from '../../assets/Illustrations/illustration-empty-state.png';
 import UnfavouriteIcon from '../../assets/Icons/icon-heart-white.svg';
-import FavouriteIcon from '../../assets/Icons/icon-heart-full.svg';
+// import FavouriteIcon from '../../assets/Icons/icon-heart-full.svg';
 import NoMovieImg from '../../assets/Logos/logo-rotten-tomatoes.png';
 
 import Header from '../../components/Header';
