@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Container, NoInfoContainer, CardContainer } from './styles';
 
 import NoInfoImg from '../../assets/Illustrations/illustration-empty-state.png';
-import Icon from '../../assets/Icons/icon-heart-white.svg';
+import UnfavouriteIcon from '../../assets/Icons/icon-heart-white.svg';
+import FavouriteIcon from '../../assets/Icons/icon-heart-full.svg';
 import NoMovieImg from '../../assets/Logos/logo-rotten-tomatoes.png';
 
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
-import MovieCard from '../../components/MovieCard';
+// import MovieCard from '../../components/MovieCard';
 import { useSelector } from 'react-redux';
 import { IState } from '../../store';
 import { IMovieItem } from '../../store/modules/movies/moviesTypes';
@@ -18,6 +19,10 @@ const Home: React.FC = () => {
   const moviesSearched = useSelector<IState, IMovieItem[]>(
     state => state.movies.Search,
   );
+
+  const handleAddMovieToFavourites = useCallback(movieId => {
+    console.log(movieId);
+  }, []);
 
   return (
     <>
@@ -40,8 +45,11 @@ const Home: React.FC = () => {
                   <span>{movie.Year}</span>
                 </div>
 
-                <div className="favouritesIcon">
-                  <img src={Icon} alt="Add to Favourites" />
+                <div
+                  className="favouritesIcon"
+                  onClick={() => handleAddMovieToFavourites(movie.imdbID)}
+                >
+                  <img src={UnfavouriteIcon} alt="Add to Favourites" />
                 </div>
               </div>
             </CardContainer>
