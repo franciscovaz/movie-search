@@ -4,6 +4,7 @@ import { AxiosResponse } from 'axios';
 import {
   addMoviesSearchedRequest,
   addMoviesSearchedSuccess,
+  addMoviesSearchedFailure,
 } from './moviesActions';
 
 import { ActionTypes, IMoviesState } from './moviesTypes';
@@ -19,6 +20,8 @@ function* getMoviesSearched({ payload }: GetMoviesSearched) {
 
   if (apiResponse.data.Response === 'True') {
     yield put(addMoviesSearchedSuccess(apiResponse.data));
+  } else {
+    yield put(addMoviesSearchedFailure());
   }
 }
 
