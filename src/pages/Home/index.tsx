@@ -5,6 +5,7 @@ import { Container, NoInfoContainer, CardContainer } from './styles';
 
 import NoInfoImg from '../../assets/Illustrations/illustration-empty-state.png';
 import Icon from '../../assets/Icons/icon-heart-white.svg';
+import NoMovieImg from '../../assets/Logos/logo-rotten-tomatoes.png';
 
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
@@ -29,7 +30,10 @@ const Home: React.FC = () => {
           {moviesSearched.map(movie => (
             <CardContainer key={movie.imdbID}>
               <div className="imgBox">
-                <img src={movie.Poster} alt={movie.Title} />
+                <img
+                  src={movie.Poster !== 'N/A' ? movie.Poster : NoMovieImg}
+                  alt={movie.Title}
+                />
 
                 <div className="content">
                   <p>{movie.Title}</p>
