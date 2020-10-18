@@ -1,4 +1,4 @@
-import { ActionTypes, IMovieResponseProps } from './moviesTypes';
+import { ActionTypes, IMoviesState } from './moviesTypes';
 
 export function addMoviesSearchedRequest(movieName: string) {
   return {
@@ -9,7 +9,7 @@ export function addMoviesSearchedRequest(movieName: string) {
   };
 }
 
-export function addMoviesSearchedSuccess(movies: IMovieResponseProps) {
+export function addMoviesSearchedSuccess(movies: IMoviesState) {
   return {
     type: ActionTypes.addMoviesSearchedSuccess,
     payload: {
