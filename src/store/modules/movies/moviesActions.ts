@@ -1,4 +1,4 @@
-import { ActionTypes, IMoviesState } from './moviesTypes';
+import { ActionTypes, IApiResponse } from './moviesTypes';
 
 export function addMoviesSearchedRequest(movieName: string) {
   return {
@@ -9,7 +9,8 @@ export function addMoviesSearchedRequest(movieName: string) {
   };
 }
 
-export function addMoviesSearchedSuccess(movies: IMoviesState) {
+export function addMoviesSearchedSuccess(movies: IApiResponse) {
+  console.log(movies);
   return {
     type: ActionTypes.addMoviesSearchedSuccess,
     payload: {

@@ -3,12 +3,12 @@ import createSagaMiddleware from 'redux-saga';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import { IMoviesState } from './modules/movies/moviesTypes';
+import { IMovieProps } from './modules/movies/moviesTypes';
 import rootReducer from './modules/rootReducer';
 import rootSaga from './modules/rootSaga';
 
 export interface IState {
-  movies: IMoviesState;
+  movies: IMovieProps;
 }
 
 const sagaMiddleware = createSagaMiddleware();

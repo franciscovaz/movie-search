@@ -7,13 +7,13 @@ import {
   addMoviesSearchedFailure,
 } from './moviesActions';
 
-import { ActionTypes, IMoviesState } from './moviesTypes';
+import { ActionTypes, IApiResponse } from './moviesTypes';
 import api from '../../../services/api';
 
 type GetMoviesSearched = ReturnType<typeof addMoviesSearchedRequest>;
 
 function* getMoviesSearched({ payload }: GetMoviesSearched) {
-  const apiResponse: AxiosResponse<IMoviesState> = yield call(
+  const apiResponse: AxiosResponse<IApiResponse> = yield call(
     api.get,
     `?apikey=${process.env.REACT_APP_API_OMDb_SECRET}&s=${payload.movieName}`,
   );

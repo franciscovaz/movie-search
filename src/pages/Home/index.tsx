@@ -17,8 +17,11 @@ import { IMovieItem } from '../../store/modules/movies/moviesTypes';
 
 const Home: React.FC = () => {
   const moviesSearched = useSelector<IState, IMovieItem[]>(
-    state => state.movies.Search,
+    state => state.movies.Search.Search,
   );
+
+  console.log('Movies searched: ', moviesSearched);
+  // const movies = useSelector<IState, IMovieProps[]>(state => state.movies);
 
   const handleAddMovieToFavourites = useCallback(movieId => {
     console.log(movieId);

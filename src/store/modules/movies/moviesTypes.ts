@@ -13,11 +13,12 @@ export interface IMovieItem {
 }
 export interface IMovieProps {
   nameSearched: string;
-  Search: IMovieItem[];
+  Search: IApiResponse;
+  favouritedMovies: string[];
 }
 
-export interface IMoviesState {
+export interface IApiResponse {
   Response: string;
-  Search: [IMovieItem];
+  Search: IMovieItem[];
   Error?: string;
 }

@@ -4,7 +4,12 @@ import { ActionTypes, IMovieProps } from './moviesTypes';
 
 const INITIAL_STATE: IMovieProps = {
   nameSearched: '',
-  Search: [],
+  Search: {
+    Response: '',
+    Search: [],
+    Error: '',
+  },
+  favouritedMovies: [],
 };
 
 const movies: Reducer<IMovieProps> = (state = INITIAL_STATE, action) => {
@@ -18,15 +23,25 @@ const movies: Reducer<IMovieProps> = (state = INITIAL_STATE, action) => {
       };
     }
     case ActionTypes.addMoviesSearchedSuccess: {
+      console.log('cenas:', action.payload.movies.Search);
       return {
         ...state,
-        Search: action.payload.movies.Search,
+        Search: {
+          Response: 'True',
+          Search: action.payload.movies.Search,
+          Error: '',
+        },
       };
     }
     case ActionTypes.addMoviesSearchedFailure: {
       return {
-        Search: [],
+        Search: {
+          Response: '',
+          Search: [],
+          Error: '',
+        },
         nameSearched: '',
+        favouritedMovies: [],
       };
     }
     default: {
