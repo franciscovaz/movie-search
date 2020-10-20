@@ -23,7 +23,6 @@ const movies: Reducer<IMovieProps> = (state = INITIAL_STATE, action) => {
       };
     }
     case ActionTypes.addMoviesSearchedSuccess: {
-      console.log('cenas:', action.payload.movies.Search);
       return {
         ...state,
         Search: {

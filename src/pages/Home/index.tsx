@@ -19,8 +19,6 @@ const Home: React.FC = () => {
   const moviesSearched = useSelector<IState, IMovieItem[]>(
     state => state.movies.Search.Search,
   );
-
-  console.log('Movies searched: ', moviesSearched);
   // const movies = useSelector<IState, IMovieProps[]>(state => state.movies);
 
   const handleAddMovieToFavourites = useCallback(movieId => {
