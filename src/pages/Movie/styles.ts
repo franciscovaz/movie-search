@@ -5,14 +5,15 @@ import NoInfoImg from '../../assets/Illustrations/illustration-empty-state.png';
 export const Container = styled.div`
   height: 100vh;
   display: flex;
-  align-items: stretch;
+
+  color: white;
 `;
 
 export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  margin: 15% 0;
 
   width: 100%;
   max-width: 50%;
@@ -27,3 +28,9 @@ export const MovieCover = styled.div`
   margin: 15% 0;
   border-radius: 20px;
 `;
+
+export const TimerInfo = styled.div``;
+export const MovieRate = styled.div``;
+export const MovieDescription = styled.div``;
+export const MovieTypeAndCast = styled.div``;
+export const MovieTypeAndCastInformation = styled.div``;
